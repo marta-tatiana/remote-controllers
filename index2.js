@@ -6,11 +6,17 @@ var pieSocket = new PieSocket({
   notifySelf: true
 });
 
+pieSocket.subscribe("best-room").then((channel) => {
+  channel.listen("event", (data, meta) => {
+    console.log("Got data!", data)
+  })
+})
+
 var left1 = () => {
   pieSocket.subscribe("best-room").then((channel) => {
     channel.publish("event", {
-      player: "1",
-    action: "left"
+      player: "2",
+      action: "left"
   });
 });
 }
@@ -18,7 +24,7 @@ var left1 = () => {
 var right1 = () => {
 pieSocket.subscribe("best-room").then((channel) => {
   channel.publish("event", {
-    player: "1",
+    player: "2",
     action: "right"
 });
 });
@@ -27,7 +33,7 @@ pieSocket.subscribe("best-room").then((channel) => {
 var up1 = () => {
 pieSocket.subscribe("best-room").then((channel) => {
   channel.publish("event", {
-    player: "1",
+    player: "2",
   action: "up"
 });
 });
@@ -36,7 +42,7 @@ pieSocket.subscribe("best-room").then((channel) => {
 var down1 = () =>
 pieSocket.subscribe("best-room").then((channel) => {
   channel.publish("event", {
-    player: "1",
+    player: "2",
   action: "down"
 });
 });
@@ -44,10 +50,11 @@ pieSocket.subscribe("best-room").then((channel) => {
 var bomb1 = () =>
 pieSocket.subscribe("best-room").then((channel) => {
   channel.publish("event", {
-    player: "1",
+    player: "2",
   action: "bomb"
 });
 });
+
 
 window.onload = (event) => {
   console.log("page is fully loaded");
@@ -57,7 +64,6 @@ window.onload = (event) => {
   document.getElementById('right').addEventListener('click', right1, false);
   document.getElementById('bomb').addEventListener('click', bomb1, false);
 };
-
 
 
 $(document).keydown(function(e) {
