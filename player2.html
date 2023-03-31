@@ -1,29 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script src="https://unpkg.com/piesocket-js@4"></script>
 <script src="./index2.js" type="module"></script>
 <link rel="stylesheet" href="./styles.css">
 
-<div class="keys">
-  <div class="up arr"><i class="fa fa-arrow-up"></i></div>
-  <br />
-  <div class="left arr"><i class="fa fa-arrow-left"></i></div>  
-  <div class="down arr"><i class="fa fa-arrow-left"></i></div>
-  <div class="right arr"><i class="fa fa-arrow-right"></i></div>
-  <br />
-  <div class="down arr"><i class="fa fa-arrow-down"></i></div>
-</div>
-<br />
-<br />
-<br />
-<br />
-<br />
-<div class="names">
-  <div class="uptext"></div>
-  <div class="downtext"></div>
-  <div class="lefttext"></div>
-  <div class="righttext"></div>
-  <div class="b"></div>  
-  <div class="a"></div>
-</div>
 
-<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="controller-styles.css">
+  <title>Bomberman Easter Controller</title>
+</head>
+<body>
+  <div class="controller">
+    <div class="button-row">
+      <button id="up" class="button button-up">Up</button>
+    </div>
+    <div class="button-row">
+      <button id="left" class="button button-left">Left</button>
+      <button id="bomb" class="button button-bomb">Bomb</button>
+      <button id="right" class="button button-right">Right</button>
+    </div>
+    <div class="button-row">
+      <button id="down" class="button button-down">Down</button>
+    </div>
+  </div>
+  <script src="controller-scripts.js"></script>
+</body>
+</html>

@@ -1,71 +1,42 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300);
-
-html {
-  background: radial-gradient(#000, #111); 
-  height: 100%;
+body {
+  font-family: Arial, sans-serif;
+  background-color: #FFFAF0;
+  background-image: url("https://www.transparenttextures.com/patterns/egg-shell.png");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
 }
 
-.keys {
-  font-family: 'Lato', sans-serif;    
-  text-align: center;
-  width: 500px;
-  height: 200px;
-  margin: auto;
+.controller {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.arr {
-  cursor: pointer;
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  line-height: 100px;
-  background: grey;
-  color: white;
-  font-size: 50px;
-  border-right: 10px solid darken(grey, 20);
-  border-bottom: 10px solid darken(grey, 20);
-  border-left: 10px solid darken(grey, 15);
-  border-top: 10px solid darken(grey, 10);  
-  display: inline-block;
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.button {
+  font-size: 1.5rem;
+  padding: 20px;
   margin: 5px;
-  transition: all .05s linear;
-  &:active {
-    border-bottom: 8px solid darken(grey, 20);
-    text-shadow: 0 0 10px white, 0 0 10px white, 0 0 20px white;    
-    transform: translate(0, 2px);
-  }
-  user-select: none;
+  background-color: #FFA07A;
+  border: none;
+  border-radius: 50%;
+  color: #FFF;
+  cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.up {
-  position: relative;
-  top: -4px;
+.button:hover {
+  background-color: #FF7F50;
 }
 
-.pressed {
-  border-bottom: 8px solid darken(grey, 20);
-  text-shadow: 0 0 10px white;
-  transform: translate(0, 2px);
-}
-
-.names {
-  font-size: 18px;  
-  font-family: 'Lato', sans-serif;    
-  text-align: center;
-  color: white;
-  text-shadow: 0 0 10px white, 0 0 10px white, 0 0 10px white, 0 0 10px white;
-}
-
-.b {
-  color: blue;  
-  text-shadow: 0 0 10px blue, 0 0 10px blue, 0 0 10px blue, 0 0 10px blue;
-  font-size: 100px;
-  font-family: serif;
-}
-
-.a {
-  color: yellow;
-  text-shadow: 0 0 10px yellow, 0 0 10px yellow, 0 0 10px yellow, 0 0 10px yellow;
-  font-size: 100px;
-  font-family: serif;
+.button:active {
+  background-color: #FF6347;
 }
