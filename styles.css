@@ -23,9 +23,9 @@ body {
 
 .button {
   font-size: 1.5rem;
-  padding: 20px;
-  margin: 5px;
-  background-color: #FFA07A;
+  padding: 50px;
+  margin: 10px;
+  background-color: hsl(120, 76%, 61%);
   border: none;
   border-radius: 50%;
   color: #FFF;
@@ -34,9 +34,9 @@ body {
 }
 
 .button:hover {
-  background-color: #FF7F50;
+  background-color: #50ff7f;
 }
 
 .button:active {
-  background-color: #FF6347;
+  background-color: #50ff7f;
 }
