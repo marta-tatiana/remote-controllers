@@ -1,3 +1,30 @@
+import {USERNAME, PASSWORD} from "./config.js"
+
+var pieSocket = new PieSocket({
+  clusterId: USERNAME,
+  apiKey: PASSWORD,
+  notifySelf: true
+});
+
+pieSocket.subscribe("chat-room").then((channel)=>{
+  console.log("Channel is ready")
+  availableChannel = channel ;       
+});
+
+pieSocket.subscribe("chat-room").then((channel)=>{
+  console.log("Channel is ready");
+
+  channel.listen("new_message", (data, meta)=>{
+      console.log("New message: ", data);
+  });
+});
+
+pieSocket.subscribe("chat-room").then((channel) => {
+  channel.publish("new_message", {
+  from: "Anand",
+  message: "Hello PieSocket!"
+});
+});
 
 $(document).keydown(function(e) {
   console.log("keydown pressed")
