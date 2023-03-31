@@ -34,7 +34,7 @@ var up1 = () => {
 pieSocket.subscribe("best-room").then((channel) => {
   channel.publish("event", {
     player: "2",
-  action: "up"
+    action: "up"
 });
 });
 }
